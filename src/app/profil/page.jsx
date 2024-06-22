@@ -1,5 +1,5 @@
 "use client";
-import { Header } from "@/components/header/header";
+import { Header } from "@/components/header/Header";
 import Image from "next/image";
 import styles from "../page.module.css";
 
