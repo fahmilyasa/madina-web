@@ -5,7 +5,7 @@ export default function LayananPublikPage() {
   return (
     <section>
       <section>
-        <Header />
+        <Header id={3} />
       </section>
       <section className="body">
         <h1>This page is for layanan publik</h1>

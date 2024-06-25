@@ -7,6 +7,7 @@ import logo from "@/images/logo.png";
 import { useRouter } from "next/navigation";
 
 const links = [
+  { link: "/", label: "Beranda" },
   { link: "/berita", label: "Berita" },
   { link: "/profil", label: "Profil" },
   { link: "/layanan-publik", label: "Layanan Publik" },
@@ -14,10 +15,10 @@ const links = [
   { link: "/gallery", label: "Gallery" },
 ];
 
-export function Header() {
+export function Header({ id }) {
   const router = useRouter();
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState(links[id].link);
 
   const items = links.map((link) => (
     <a

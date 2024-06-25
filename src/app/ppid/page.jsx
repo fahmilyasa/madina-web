@@ -5,7 +5,7 @@ export default function PPIDPage() {
   return (
     <section>
       <section>
-        <Header />
+        <Header id={4} />
       </section>
       <section className="body">
         <h1>This page is for PPID</h1>

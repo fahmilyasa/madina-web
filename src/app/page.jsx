@@ -13,7 +13,7 @@ export default function Home() {
       }}
     >
       <section>
-        <Header />
+        <Header id={0} />
       </section>
       <section className="body">
         <HomeContainer />

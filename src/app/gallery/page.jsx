@@ -5,7 +5,7 @@ export default function GalleryPage() {
   return (
     <section>
       <section>
-        <Header />
+        <Header id={5} />
       </section>
       <section className="body">
         <h1>This page is for gallery</h1>
