@@ -8,7 +8,7 @@ export default function BeritaPage() {
         <Header id={1} />
       </section>
       <section className="body">
-        <h1>This page is for berita</h1>
+        <h1 style={{ paddingLeft: 40 }}>Berita Madina</h1>
       </section>
       <section className="footer"></section>
     </section>

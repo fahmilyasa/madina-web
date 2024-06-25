@@ -18,7 +18,6 @@ export default function Home() {
       <section className="body">
         <HomeContainer />
       </section>
-      <section className="footer"></section>
     </section>
   );
 }

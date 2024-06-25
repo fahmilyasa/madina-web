@@ -9,10 +9,8 @@ import { useRouter } from "next/navigation";
 const links = [
   { link: "/", label: "Beranda" },
   { link: "/berita", label: "Berita" },
-  { link: "/profil", label: "Profil" },
   { link: "/layanan-publik", label: "Layanan Publik" },
-  { link: "/ppid", label: "PPID" },
-  { link: "/gallery", label: "Gallery" },
+  { link: "/lokasi-wisata", label: "Lokasi Wisata" },
 ];
 
 export function Header({ id }) {
