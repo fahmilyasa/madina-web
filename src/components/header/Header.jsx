@@ -36,27 +36,30 @@ export function Header({ id }) {
 
   return (
     <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <div style={{ display: "flex" }}>
-          <Image src={logo} width={25}></Image>
-          <Title
-            style={{
-              color: "white",
-              fontSize: 18,
-              fontFamily: "inherit",
-              marginLeft: 0,
-              paddingLeft: 10,
-            }}
-          >
-            KABUPATEN MANDAILING NATAL
-          </Title>
-        </div>
+      <div className={classes.inner}>
+        <a href="/" className={classes.logoLink}>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Image src={logo} width={25} height={25} />
+            <Title
+              style={{
+                color: "white",
+                fontSize: 18,
+                fontFamily: "inherit",
+                marginLeft: 0,
+                paddingLeft: 10,
+                cursor: "pointer",
+              }}
+            >
+              KABUPATEN MANDAILING NATAL
+            </Title>
+          </div>
+        </a>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
+      </div>
     </header>
   );
 }

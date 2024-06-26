@@ -1,17 +1,22 @@
 .header {
   color: white;
   height: rem(56px);
-  margin-bottom: rem(120px);
   background-color: #1a3b64;
-  border-bottom: rem(1px) solid
-    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  width: 100%;
 }
 
 .inner {
+  width: 100%;
   height: rem(56px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .link {

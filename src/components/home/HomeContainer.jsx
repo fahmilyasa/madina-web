@@ -15,6 +15,7 @@ export const HomeContainer = () => {
         textAlign: "center",
         color: "white",
         padding: "0 20px",
+        marginTop: "140px",
       }}
     >
       <Title>WEB RESMI KABUPATEN MANDALING NATAL</Title>
@@ -55,6 +56,10 @@ export const HomeContainer = () => {
             color: "white",
             border: "none",
             padding: "10px 20px",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            console.log("Tombol diklik!");
           }}
         >
           Cari

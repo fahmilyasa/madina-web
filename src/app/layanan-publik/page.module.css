@@ -1,0 +1,46 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  height: fit-content;
+  margin-top: 10px;
+  font-size: x-large;
+  padding-left: 56.5px;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: 20px 20px 20px 56.5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a3b64;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin-bottom: 0;
+  font-size: large;
+}
