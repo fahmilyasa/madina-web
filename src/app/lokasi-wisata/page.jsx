@@ -1,38 +1,24 @@
 "use client";
 import { Header } from "@/components/header/Header";
-import classes from "./page.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import classes from "./page.module.css";
 
-import wisata1 from "@/images/wisata1.jpg";
-import wisata2 from "@/images/wisata2.jpg";
-import wisata3 from "@/images/wisata3.jpg";
-import wisata4 from "@/images/wisata4.jpg";
-
-const places = [
-  {
-    image: wisata1,
-    title: "Gordang Sambilan",
-    link: "https://ksdae.menlhk.go.id/artikel/9435/gordang-sambilan-budaya-mandailing.html",
-  },
-  {
-    image: wisata2,
-    title: "Payabulan",
-    link: "https://www.travelingmedan.com/2020/07/payabulan-destinasi-wisata-lembah-sorik-marapi.html",
-  },
-  {
-    image: wisata3,
-    title: "Aek Batu Bontar",
-    link: "https://sumut.bulat.co.id/madin/wisata-aek-batu-bontar-panyabungan-timur-butuh-perhatian-pemerintahnbsp/",
-  },
-  {
-    image: wisata4,
-    title: "Aek Sijorni",
-    link: "https://www.detik.com/sumut/wisata/d-7292661/wisata-aek-sijorni-lokasi-jam-buka-htm-wahana-dan-fasilitas",
-  },
-];
+import { getPlaces } from "@/libs/api";
+import { useEffect, useState } from "react";
 
 export default function LokasiWisataPage() {
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+    const fetchPlaces = async () => {
+      const queryPlaces = await getPlaces();
+      setPlaces(queryPlaces);
+      console.log("🚀 ~ LokasiWisataPage ~ places:", queryPlaces);
+    };
+
+    fetchPlaces();
+  }, []);
   const router = useRouter();
 
   return (
@@ -45,19 +31,19 @@ export default function LokasiWisataPage() {
       </section>
       <section className={classes.placesContainer}>
         <div className={classes.gridContainer}>
-          {places.map((place, index) => (
+          {places?.map((place, index) => (
             <div key={index} className={classes.place}>
-              <a href={place.link} className={classes.placeLink}>
+              <a href={place?.link} className={classes.placeLink}>
                 <div className={classes.imageContainer}>
                   <Image
-                    src={place.image}
-                    alt={place.title}
+                    src={place?.image}
+                    alt={place?.name}
                     layout="fill"
                     objectFit="cover"
                   />
                   <div className={classes.overlay}></div>
                   <div className={classes.overlayContent}>
-                    <h2>{place.title}</h2>
+                    <h2>{place?.name}</h2>
                     <p>Selengkapnya →</p>
                   </div>
                 </div>
